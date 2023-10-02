@@ -13,8 +13,11 @@
 This project was developed using React and Sass. The following external libraries were used only on specific occasions for practical reasons:
 
 -Immer: to simplify reducer syntax and prevent excessive destructuring.
+
 -Polished: for automatic contrast based on the background color.
+
 -date-fns: for improved time tracking in timers.
+
 -phosphor-react: for icons.
 
 ## Setup
