@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+
+    border-radius: 5px;
+    background-color: var(--surface-1);
+    border: 1px solid var(--surface-2);
+    margin: 0 0 20px 0;
+
+    button {
+        width: 20%;
+        height: 100%;
+        background-color: var(--surface-2);
+        color: var(--text-secondary);
+        border: none;
+        font-size: 0.8rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.1s;
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+          }
+
+          
+
+          &:not(:disabled):hover {
+            background-color: var(--text-primary);
+            color: var(--background);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        height: 90px;
+
+        button {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+.box {
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+
+    .timeBox {
+        padding: 10px;
+        height: 100%;
+
+        :nth-child(2) {
+            margin-top: 10px;
+        }
+
+    }
+
+    .scoreBox {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    span {
+        display: flex;
+        font-size: 1rem;
+        color: var(--text-secondary);
+        justify-content: center;
+        align-items: center;
+        
+        strong {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        span {
+            font-size: 0.8rem;
+
+            strong {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+.divider {
+    border-top: 3px solid var(--surface-2);
+}

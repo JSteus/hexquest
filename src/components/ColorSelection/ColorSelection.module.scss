@@ -1,0 +1,83 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.colorPreview {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: red;
+    border-radius: 0 0 5px 5px;
+
+    button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        background-color: transparent;
+        font-weight: bold;
+        color: var(--background);
+        border: 1px solid var(--background);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.1s;
+
+        &:hover {
+            background-color: var(--background);
+            color: var(--standby);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 300px;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+.colorPreviewDefault {
+    background-color: var(--standby);
+}
+
+.optionsButtonContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0;
+
+    button {
+        font-size: 1.2rem;
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        font-weight: bold;
+        color: var(--text-primary);
+        border: 1px solid var(--text-secondary);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.1s;
+
+        &:hover {
+            background-color: var(--text-primary);
+            color: var(--background);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        padding: 10px 0;
+
+        button {
+            font-size: 1rem; 
+            height: 40px;
+            
+        }
+    }
+}
